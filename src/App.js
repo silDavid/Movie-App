@@ -15,12 +15,13 @@ function App() {
     e.preventDefault()
 
     if(searchTerm) {
-      fetch(`http://www.omdbapi.com/?apikey=38a4e33c&s=${searchTerm}`)
+      fetch(`https://www.omdbapi.com/?apikey=38a4e33c&s=${searchTerm}`)
         .then(res => res.json())
         .then(data => {
           console.log(data);
           setMovies(data.Search)
         })
+        .catch(error => console.log(error))
         setSearchTerm('')
     }
   }
