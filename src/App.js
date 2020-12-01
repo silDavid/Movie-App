@@ -46,7 +46,7 @@ function App() {
         </header>
         <Switch>
           <Route exact path='/' render={props => (
-            <div className="movies-container d-flex flex-wrap justify-content-around m-5">
+            <div className="d-flex flex-wrap justify-content-around m-5">
               {movies.map(movie => (
                 <MoviesGrid key={movie.imdbID} {...movie}/>          
               ))}
